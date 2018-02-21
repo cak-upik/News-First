@@ -1,0 +1,43 @@
+{
+	"name": "newsfirst",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"android-staging": "ENVFILE=.env.staging react-native run-android",
+		"build-android-staging": "export ENVFILE=.env.staging && cd android && ./gradlew assembleRelease && cd ..",
+		"release-production": "ENVFILE=.env.staging react-native run-android --variant=release",
+		"test": "jest"
+	},
+	"dependencies": {
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.45.1",
+		"jest": "16.0.1",
+		"jest-react-native": "16.0.0",
+		"lodash": "^4.17.4",
+		"numeral": "^2.0.6",
+		"react-native-config": "0.9.0",
+		"react-native-linear-gradient": "^2.3.0",
+		"react-native-navigation": "1.1.88",
+		"react-native-scrollable-tab-view": "^0.7.4",
+		"react-native-swiper": "^1.5.4",
+		"react-native-vector-icons": "^4.3.0",
+		"react-native-communications": "^2.2.1",
+		"react-redux": "^5.0.5",
+		"redux": "^3.7.2",
+		"redux-thunk": "^2.2.0",
+		"redux-logger": "^3.0.6",
+		"redux-promise": "^0.5.3"
+	},
+	"devDependencies": {
+		"babel-jest": "22.4.0",
+		"babel-preset-react-native": "4.0.0",
+		"redux-immutable-state-invariant": "^2.0.0",
+		"jest": "22.4.0",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	},
+	"description": "When news come first and the others later"
+}
